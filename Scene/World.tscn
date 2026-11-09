@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cggnbxp6oqi0b"]
+
+[ext_resource type="Texture2D" uid="uid://dcrsvibvesu24" path="res://Textures/grass seamless.png" id="1_njlop"]
+[ext_resource type="Script" uid="uid://pa5fxiu4n6ba" path="res://Script/Player/PlayerWorld.gd" id="1_wwl11"]
+[ext_resource type="PackedScene" uid="uid://c4nax0tr3e00y" path="res://Prefabs/Autoload/Ui.tscn" id="2_3sajw"]
+[ext_resource type="PackedScene" uid="uid://crolvm2pvi406" path="res://Objects/GumballHouse/gumball_house2.tscn" id="4_gx810"]
+[ext_resource type="PackedScene" uid="uid://bjvuyrlrxsmp4" path="res://Objects/Door/Door.glb" id="4_njlop"]
+[ext_resource type="PackedScene" uid="uid://cuxxo0b7by5sc" path="res://Prefabs/Grass/grass.glb" id="4_p2i0q"]
+[ext_resource type="Material" uid="uid://cgk4glwmc4vk2" path="res://addons/terrain_3d/extras/shaders/M_ocean.tres" id="5_gx810"]
+[ext_resource type="Texture2D" uid="uid://jefrv1l5ou13" path="res://terrainNormals/normalTerrain.png" id="6_fyj18"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q5inl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3sajw"]
+margin = 0.001
+radius = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2142r"]
+size = Vector3(1.1414795, 2.1567383, 0.123168945)
+
+[sub_resource type="BoxMesh" id="BoxMesh_njlop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gx810"]
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_njlop"]
+_shader_parameters = {
+&"bias_distance": 512.0,
+&"blend_sharpness": null,
+&"depth_blur": 0.0,
+&"distant_normal_scale": 2.0,
+&"flat_terrain_normals": null,
+&"general_uniforms": null,
+&"mipmap_bias": null,
+&"mipmaps": null,
+&"private": null
+}
+world_background = 0
+max_regions = 64
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_3sajw"]
+name = "grass"
+scene_file = ExtResource("4_p2i0q")
+density = 0.425
+cast_shadows = 0
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_g3u1b"]
+name = "grass seamless"
+albedo_texture = ExtResource("1_njlop")
+normal_texture = ExtResource("6_fyj18")
+uv_scale = 0.2
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_gn608"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_3sajw")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_g3u1b")])
+
+[node name="World" type="Node3D" unique_id=543816827]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=538624519 node_paths=PackedStringArray("head", "camera", "raycast") groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+floor_snap_length = 0.4
+script = ExtResource("1_wwl11")
+JUMP_VELOCITY = 17
+gravity = 5
+cyclopejumpTolerance = 0.2
+head = NodePath("Head")
+camera = NodePath("Head/Camera3D")
+raycast = NodePath("Head/Camera3D/RayCast3D")
+metadata/_custom_type_script = "uid://c1ajd6xjf8bhe"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=443196423]
+visible = false
+mesh = SubResource("CapsuleMesh_q5inl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=725052441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067186356, -0.003606081, -0.0002873838)
+shape = SubResource("CapsuleShape3D_3sajw")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=848334644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6527915, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=2041952021]
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D" unique_id=456399066]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -3.205, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1983102703]
+transform = Transform3D(0.030963287, 0.8603795, -0.5087125, -0.6922281, 0.38559985, 0.6100272, 0.7210143, 0.3332569, 0.6075181, -27, 31, 37)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.69
+shadow_blur = 5.022
+
+[node name="Ui" parent="." unique_id=702231449 instance=ExtResource("2_3sajw")]
+
+[node name="Door" type="StaticBody3D" parent="." unique_id=1372580309]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=1691964448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53548145, 1.0703968, 0)
+shape = SubResource("BoxShape3D_2142r")
+
+[node name="Door" parent="Door" unique_id=1133672152 instance=ExtResource("4_njlop")]
+
+[node name="GumballHouse" parent="." unique_id=1800500223 instance=ExtResource("4_gx810")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0135288, -0.17243004, -17.358475)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1370123905]
+transform = Transform3D(0.535532, -0.8445149, 0, 0.8445149, 0.535532, 0, 0, 0, 1, 9.030911, 2.1587777, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=779365409]
+mesh = SubResource("BoxMesh_njlop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1577941877]
+shape = SubResource("BoxShape3D_gx810")
+
+[node name="TerrainHouse" type="Terrain3D" parent="." unique_id=913009043]
+data_directory = "res://Terrains/House"
+material = SubResource("Terrain3DMaterial_njlop")
+assets = SubResource("Terrain3DAssets_gn608")
+mesh_size = 8
+vertex_spacing = 0.25
+displacement_sharpness = 0.5
+ocean_material = ExtResource("5_gx810")
+top_level = true
+metadata/_edit_lock_ = true

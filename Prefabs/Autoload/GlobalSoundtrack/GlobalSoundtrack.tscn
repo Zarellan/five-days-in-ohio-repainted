@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cdmflnwcsg43p"]
+
+[ext_resource type="Script" uid="uid://bnju56my6mrcg" path="res://Prefabs/Autoloads/GlobalSoundtrack/GlobalSoundtrack.gd" id="1_qi76d"]
+
+[node name="GlobalSoundtrack" type="AudioStreamPlayer" unique_id=1219913773]
+script = ExtResource("1_qi76d")

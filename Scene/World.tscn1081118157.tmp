@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cggnbxp6oqi0b"]
+
+[ext_resource type="Script" uid="uid://djov2doa261pc" path="res://Script/InteractableObjects/objects/cubeInter.gd" id="1_3vc68"]
+[ext_resource type="Script" uid="uid://pa5fxiu4n6ba" path="res://Script/Player/PlayerWorld.gd" id="1_wwl11"]
+[ext_resource type="PackedScene" uid="uid://dtrnbpo4frsnc" path="res://Objects/tests/Door_1_Flat.fbx" id="2_2142r"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_q5inl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5inl"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q5inl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q5inl"]
+radius = 0.23046875
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wwl11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2142r"]
+size = Vector3(1.1414795, 2.1567383, 0.123168945)
+
+[node name="World" type="Node3D" unique_id=543816827]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=9469839]
+transform = Transform3D(58.365, 0, 0, 0, 0.335, 0, 0, 0, 56.39, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=3931810]
+mesh = SubResource("BoxMesh_q5inl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1985466200]
+shape = SubResource("BoxShape3D_q5inl")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=540704177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7453513, -6.0768876)
+script = ExtResource("1_3vc68")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=872346870]
+mesh = SubResource("BoxMesh_q5inl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=283764903]
+shape = SubResource("BoxShape3D_q5inl")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=50576966 node_paths=PackedStringArray("head", "camera", "raycast")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+script = ExtResource("1_wwl11")
+head = NodePath("Head")
+camera = NodePath("Head/Camera3D")
+raycast = NodePath("Head/Camera3D/RayCast3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=443196423]
+visible = false
+mesh = SubResource("CapsuleMesh_q5inl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=725052441]
+shape = SubResource("CapsuleShape3D_q5inl")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=848334644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6527915, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=2041952021]
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D" unique_id=456399066]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -3.205, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1983102703]
+transform = Transform3D(-0.6845089, -0.6185947, -0.38573068, -0.692228, 0.38559997, 0.6100273, -0.22862175, 0.6845827, -0.692155, -27, 31, 37)
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="UI" type="Control" parent="." unique_id=1151149900]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=1008962095]
+
+[node name="Pointing" type="Control" parent="UI/CanvasLayer" unique_id=1049647440]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/CanvasLayer/Pointing" unique_id=1152542393]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_wwl11")
+
+[node name="Door" type="StaticBody3D" parent="." unique_id=1372580309]
+
+[node name="Door_1_Flat" parent="Door" unique_id=220545437 instance=ExtResource("2_2142r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1488338, 0.16750002, -4.9847355)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=1691964448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.677093, 1.2356153, -4.999445)
+shape = SubResource("BoxShape3D_2142r")

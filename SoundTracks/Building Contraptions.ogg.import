@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1t7aqkobu8gi"
+path="res://.godot/imported/Building Contraptions.ogg-cbb573624d32cac755c0dc0ae12c4679.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundTracks/Building Contraptions.ogg"
+dest_files=["res://.godot/imported/Building Contraptions.ogg-cbb573624d32cac755c0dc0ae12c4679.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
