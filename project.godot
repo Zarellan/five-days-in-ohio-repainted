@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Five days in ohio repainted"
 run/main_scene="uid://cggnbxp6oqi0b"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -29,7 +29,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/linear_stairs/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
 
 [global_group]
 
@@ -93,5 +93,4 @@ common/physics_interpolation=true
 
 rendering_device/driver.windows="d3d12"
 textures/vram_compression/import_etc2_astc=true
-scaling_3d/scale=2.0
 environment/defaults/default_clear_color=Color(0.50805545, 0.7828941, 0.8796207, 1)

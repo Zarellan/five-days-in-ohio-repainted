@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjhvv0s3j4v2a"
-path.s3tc="res://.godot/imported/GumballHouse_texture65.webp-c20737cceee76f4e2c163cd7c1647d01.s3tc.ctex"
 path.etc2="res://.godot/imported/GumballHouse_texture65.webp-c20737cceee76f4e2c163cd7c1647d01.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/GumballHouse/GumballHouse_texture65.webp"
-dest_files=["res://.godot/imported/GumballHouse_texture65.webp-c20737cceee76f4e2c163cd7c1647d01.s3tc.ctex", "res://.godot/imported/GumballHouse_texture65.webp-c20737cceee76f4e2c163cd7c1647d01.etc2.ctex"]
+dest_files=["res://.godot/imported/GumballHouse_texture65.webp-c20737cceee76f4e2c163cd7c1647d01.etc2.ctex"]
 
 [params]
 

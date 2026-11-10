@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqqenwpbhefdo"
-path.s3tc="res://.godot/imported/Door_T_WoodTrim_Roughness.png-0ac75b94a99a2b02d2996d040296e3a0.s3tc.ctex"
 path.etc2="res://.godot/imported/Door_T_WoodTrim_Roughness.png-0ac75b94a99a2b02d2996d040296e3a0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/Door/Door_T_WoodTrim_Roughness.png"
-dest_files=["res://.godot/imported/Door_T_WoodTrim_Roughness.png-0ac75b94a99a2b02d2996d040296e3a0.s3tc.ctex", "res://.godot/imported/Door_T_WoodTrim_Roughness.png-0ac75b94a99a2b02d2996d040296e3a0.etc2.ctex"]
+dest_files=["res://.godot/imported/Door_T_WoodTrim_Roughness.png-0ac75b94a99a2b02d2996d040296e3a0.etc2.ctex"]
 
 [params]
 

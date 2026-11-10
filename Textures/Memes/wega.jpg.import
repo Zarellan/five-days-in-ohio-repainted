@@ -3,17 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://px8i7gc5x4m7"
-path.s3tc="res://.godot/imported/wega.jpg-debba85638cb92dfa3ed7d39a7ca09e7.s3tc.ctex"
 path.etc2="res://.godot/imported/wega.jpg-debba85638cb92dfa3ed7d39a7ca09e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Memes/wega.jpg"
-dest_files=["res://.godot/imported/wega.jpg-debba85638cb92dfa3ed7d39a7ca09e7.s3tc.ctex", "res://.godot/imported/wega.jpg-debba85638cb92dfa3ed7d39a7ca09e7.etc2.ctex"]
+dest_files=["res://.godot/imported/wega.jpg-debba85638cb92dfa3ed7d39a7ca09e7.etc2.ctex"]
 
 [params]
 

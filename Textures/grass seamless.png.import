@@ -3,17 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcrsvibvesu24"
-path.s3tc="res://.godot/imported/grass seamless.png-fba96f425c6095906a8f69ab60edaf95.s3tc.ctex"
 path.etc2="res://.godot/imported/grass seamless.png-fba96f425c6095906a8f69ab60edaf95.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/grass seamless.png"
-dest_files=["res://.godot/imported/grass seamless.png-fba96f425c6095906a8f69ab60edaf95.s3tc.ctex", "res://.godot/imported/grass seamless.png-fba96f425c6095906a8f69ab60edaf95.etc2.ctex"]
+dest_files=["res://.godot/imported/grass seamless.png-fba96f425c6095906a8f69ab60edaf95.etc2.ctex"]
 
 [params]
 

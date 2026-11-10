@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4fl8awknwvrr"
-path.s3tc="res://.godot/imported/BoxCrate_T_WoodTrim_Roughness.png-495edb1af679bc6c77b441233c9e2628.s3tc.ctex"
 path.etc2="res://.godot/imported/BoxCrate_T_WoodTrim_Roughness.png-495edb1af679bc6c77b441233c9e2628.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/BoxCrate/BoxCrate_T_WoodTrim_Roughness.png"
-dest_files=["res://.godot/imported/BoxCrate_T_WoodTrim_Roughness.png-495edb1af679bc6c77b441233c9e2628.s3tc.ctex", "res://.godot/imported/BoxCrate_T_WoodTrim_Roughness.png-495edb1af679bc6c77b441233c9e2628.etc2.ctex"]
+dest_files=["res://.godot/imported/BoxCrate_T_WoodTrim_Roughness.png-495edb1af679bc6c77b441233c9e2628.etc2.ctex"]
 
 [params]
 
