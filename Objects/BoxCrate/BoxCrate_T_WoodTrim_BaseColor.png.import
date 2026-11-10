@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb8hxlikwe4ql"
+path.s3tc="res://.godot/imported/BoxCrate_T_WoodTrim_BaseColor.png-ce1a97d1a989bd8da4e03b99fad0fc0f.s3tc.ctex"
 path.etc2="res://.godot/imported/BoxCrate_T_WoodTrim_BaseColor.png-ce1a97d1a989bd8da4e03b99fad0fc0f.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/BoxCrate/BoxCrate_T_WoodTrim_BaseColor.png"
-dest_files=["res://.godot/imported/BoxCrate_T_WoodTrim_BaseColor.png-ce1a97d1a989bd8da4e03b99fad0fc0f.etc2.ctex"]
+dest_files=["res://.godot/imported/BoxCrate_T_WoodTrim_BaseColor.png-ce1a97d1a989bd8da4e03b99fad0fc0f.s3tc.ctex", "res://.godot/imported/BoxCrate_T_WoodTrim_BaseColor.png-ce1a97d1a989bd8da4e03b99fad0fc0f.etc2.ctex"]
 
 [params]
 

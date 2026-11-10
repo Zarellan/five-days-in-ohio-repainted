@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Five days in ohio repainted"
-run/main_scene="uid://cggnbxp6oqi0b"
+run/main_scene="uid://cdaw62q373hxw"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

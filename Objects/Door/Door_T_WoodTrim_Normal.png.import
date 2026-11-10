@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cumt2gp5f8yp1"
+path.s3tc="res://.godot/imported/Door_T_WoodTrim_Normal.png-483dbb60c192e90099c2c15656ce039f.s3tc.ctex"
 path.etc2="res://.godot/imported/Door_T_WoodTrim_Normal.png-483dbb60c192e90099c2c15656ce039f.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/Door/Door_T_WoodTrim_Normal.png"
-dest_files=["res://.godot/imported/Door_T_WoodTrim_Normal.png-483dbb60c192e90099c2c15656ce039f.etc2.ctex"]
+dest_files=["res://.godot/imported/Door_T_WoodTrim_Normal.png-483dbb60c192e90099c2c15656ce039f.s3tc.ctex", "res://.godot/imported/Door_T_WoodTrim_Normal.png-483dbb60c192e90099c2c15656ce039f.etc2.ctex"]
 
 [params]
 

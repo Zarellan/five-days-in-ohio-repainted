@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://c4nax0tr3e00y"]
 
+[ext_resource type="Script" uid="uid://mtf1qtxrctuw" path="res://Script/UI/UiScript.gd" id="1_61y8v"]
 [ext_resource type="Texture2D" uid="uid://bli6p60lfbwy7" path="res://icon.svg" id="1_w72d6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_wwl11"]
 
-[node name="Ui" type="CanvasLayer" unique_id=1851594555]
+[node name="Ui" type="CanvasLayer" unique_id=1851594555 node_paths=PackedStringArray("phoneControls", "virtualJoystick")]
 layer = 2
+script = ExtResource("1_61y8v")
+phoneControls = NodePath("PhoneControls")
+virtualJoystick = NodePath("PhoneControls/leftJoys/VirtualJoystick")
 
 [node name="Pointing" type="Control" parent="." unique_id=6355524]
 layout_mode = 3
@@ -47,14 +51,23 @@ grow_vertical = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="leftJoys" type="Control" parent="." unique_id=930786560]
+[node name="PhoneControls" type="Control" parent="." unique_id=813507793]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="leftJoys" type="Control" parent="PhoneControls" unique_id=930786560]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="leftJoys" unique_id=1169387438]
+[node name="VirtualJoystick" type="VirtualJoystick" parent="PhoneControls/leftJoys" unique_id=1169387438]
 custom_minimum_size = Vector2(240, 240)
 layout_mode = 0
 offset_left = 50.0
@@ -65,8 +78,8 @@ joystick_size = 252.0
 tip_size = 146.0
 metadata/_edit_use_anchors_ = true
 
-[node name="RightJoys" type="Control" parent="." unique_id=1505640533]
-layout_mode = 3
+[node name="RightJoys" type="Control" parent="PhoneControls" unique_id=1505640533]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -77,14 +90,16 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="RightJoys" unique_id=316908709]
+[node name="TouchScreenButton" type="TouchScreenButton" parent="PhoneControls/RightJoys" unique_id=316908709]
 position = Vector2(-181, -124)
 scale = Vector2(1.066, 1.066)
 texture_normal = ExtResource("1_w72d6")
 action = "ui_accept"
+visibility_mode = 1
 
-[node name="act" type="TouchScreenButton" parent="RightJoys" unique_id=954872719]
+[node name="act" type="TouchScreenButton" parent="PhoneControls/RightJoys" unique_id=954872719]
 position = Vector2(-125, -278.00003)
 scale = Vector2(1.066, 1.066)
 texture_normal = ExtResource("1_w72d6")
 action = "activate"
+visibility_mode = 1

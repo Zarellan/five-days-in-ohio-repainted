@@ -43,7 +43,7 @@ func rotate_view(relative: Vector2, sensitivity: float) -> void:
 	cameraVarX = clamp(cameraVarX,deg_to_rad(-90), deg_to_rad(60))
 func _unhandled_input(event):
 	if event is InputEventScreenDrag:
-		if !Ui.get_node("leftJoys/VirtualJoystick").get_global_rect().has_point(event.position):
+		if !Ui.virtualJoystick.get_global_rect().has_point(event.position):
 			rotate_view(event.relative, 0.004)
 	elif event is InputEventMouseMotion:
 		rotate_view(event.relative, 0.004)

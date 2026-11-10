@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cggnbxp6oqi0b"]
+[gd_scene format=3 uid="uid://cdaw62q373hxw"]
 
 [ext_resource type="Texture2D" uid="uid://dcrsvibvesu24" path="res://Textures/grass seamless.png" id="1_njlop"]
 [ext_resource type="Script" uid="uid://pa5fxiu4n6ba" path="res://Script/Player/PlayerWorld.gd" id="1_wwl11"]
@@ -40,8 +40,7 @@ max_regions = 64
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_3sajw"]
 name = "grass"
 scene_file = ExtResource("4_p2i0q")
-density = 0.425
-cast_shadows = 0
+density = 1.0884511
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -121,8 +120,12 @@ shape = SubResource("BoxShape3D_gx810")
 data_directory = "res://Terrains/House"
 material = SubResource("Terrain3DMaterial_njlop")
 assets = SubResource("Terrain3DAssets_gn608")
-mesh_size = 8
-vertex_spacing = 0.25
+keep_uncompressed_color = false
+collision_shape_size = 8
+collision_radius = 16
+mesh_size = 32
+cast_shadows = 0
+gi_mode = 0
 displacement_sharpness = 0.5
 ocean_material = ExtResource("5_gx810")
 top_level = true
